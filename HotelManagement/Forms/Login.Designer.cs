@@ -124,6 +124,7 @@ namespace HotelManagement.Forms
             this.clearBtn.TabIndex = 14;
             this.clearBtn.Text = "Clear";
             this.clearBtn.Visible = false;
+            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
             // 
             // signUpBtn
             // 

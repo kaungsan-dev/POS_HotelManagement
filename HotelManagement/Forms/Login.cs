@@ -59,20 +59,20 @@ namespace HotelManagement.Forms
                     this.Hide();
                     Dashboard um = new Dashboard(this);
                     um.Show();
+                    clearBtn.PerformClick();
                 }
                 else if (role.Equals("Reception"))
                 {
                     this.Hide();
                     testForm tf = new testForm();
                     tf.Show();
+                    clearBtn.PerformClick();
                 }
             }
             else
             {
                 errLbl.Visible = true;
-                userNameLogin.Clear();
-                passLogin.Clear();
-                roleLogin.SelectedIndex = -1;
+                clearBtn.PerformClick();
             }
         }
 
@@ -91,6 +91,13 @@ namespace HotelManagement.Forms
         private void cancelBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void clearBtn_Click(object sender, EventArgs e)
+        {
+            userNameLogin.Clear();
+            passLogin.Clear();
+            roleLogin.SelectedIndex = -1;
         }
     }
 }

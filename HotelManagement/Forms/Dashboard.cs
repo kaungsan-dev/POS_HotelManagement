@@ -33,6 +33,8 @@ namespace HotelManagement.Forms
         private void manageEmpBtn_Click(object sender, EventArgs e)
         {
             movingPanel.Left = manageEmpBtn.Left+15;
+            uC_ManageEmp1.Visible = true;
+            uC_ManageEmp1.BringToFront();
         }
 
         private void manageAccBtn_Click(object sender, EventArgs e)
@@ -45,6 +47,15 @@ namespace HotelManagement.Forms
         private void Dashboard_Load(object sender, EventArgs e)
         {
             uC_ManageAcc1.Visible = false;
+            uC_ManageEmp1.Visible = false;
+            uC_AllDetails1.Visible = false;
+        }
+
+        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        {
+            movingPanel.Left = detailBtn.Left + 10;
+            uC_AllDetails1.Visible = true;
+            uC_AllDetails1.BringToFront();
         }
     }
 }

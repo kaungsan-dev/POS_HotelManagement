@@ -54,6 +54,24 @@
     <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
       <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=8.0.27.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.8.0.27\lib\net452\MySql.Data.dll</HintPath>
     </Reference>
@@ -99,14 +117,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AllUserControl\UC_AllDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AllUserControl\UC_AllDetails.Designer.cs">
+      <DependentUpon>UC_AllDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="AllUserControl\UC_ManageAcc.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="AllUserControl\UC_ManageAcc.Designer.cs">
       <DependentUpon>UC_ManageAcc.cs</DependentUpon>
     </Compile>
+    <Compile Include="AllUserControl\UC_ManageEmp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AllUserControl\UC_ManageEmp.Designer.cs">
+      <DependentUpon>UC_ManageEmp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Connect.cs" />
     <Compile Include="Controller\AccountController.cs" />
+    <Compile Include="Controller\EmployeeController.cs" />
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,10 +162,30 @@
     <Compile Include="Forms\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\testReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\testReport.Designer.cs">
+      <DependentUpon>testReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hotelmanagementDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hotelmanagementDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\Employee.cs" />
+    <Compile Include="Report\EmployeeList.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="AllUserControl\UC_AllDetails.resx">
+      <DependentUpon>UC_AllDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AllUserControl\UC_ManageAcc.resx">
       <DependentUpon>UC_ManageAcc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllUserControl\UC_ManageEmp.resx">
+      <DependentUpon>UC_ManageEmp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -145,6 +196,9 @@
     <EmbeddedResource Include="Forms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\testReport.resx">
+      <DependentUpon>testReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -154,7 +208,35 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Report\Report1.rdlc" />
+    <None Include="hotelmanagementDataSet.xsc">
+      <DependentUpon>hotelmanagementDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="hotelmanagementDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hotelmanagementDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="hotelmanagementDataSet.xss">
+      <DependentUpon>hotelmanagementDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Connect.datasource" />
+    <None Include="Properties\DataSources\HotelManagement.AllUserControl.UC_AllDetails.datasource" />
+    <None Include="Properties\DataSources\HotelManagement.AllUserControl.UC_ManageAcc.datasource" />
+    <None Include="Properties\DataSources\HotelManagement.AllUserControl.UC_ManageEmp.datasource" />
+    <None Include="Properties\DataSources\HotelManagement.Controller.AccountController.datasource" />
+    <None Include="Properties\DataSources\HotelManagement.Controller.EmployeeController.datasource" />
+    <None Include="Properties\DataSources\HotelManagement.Forms.Dashboard.datasource" />
+    <None Include="Properties\DataSources\HotelManagement.Forms.Login.datasource" />
+    <None Include="Properties\DataSources\HotelManagement.Forms.testForm.datasource" />
+    <None Include="Properties\DataSources\HotelManagement.hotelmanagementDataSetTableAdapters.employeeTableAdapter.datasource" />
+    <None Include="Properties\DataSources\HotelManagement.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\HotelManagement.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\HotelManagement.Report.Employee.EmployeeList.datasource" />
+    <None Include="Properties\DataSources\hotelmanagementDataSet.employeeDataTable.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\Register.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -167,6 +249,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

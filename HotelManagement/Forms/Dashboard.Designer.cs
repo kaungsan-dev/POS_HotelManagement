@@ -32,13 +32,18 @@ namespace HotelManagement.Forms
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.menuPanel = new System.Windows.Forms.Panel();
+            this.detailBtn = new Guna.UI2.WinForms.Guna2GradientButton();
             this.movingPanel = new System.Windows.Forms.Panel();
             this.manageEmpBtn = new Guna.UI2.WinForms.Guna2GradientButton();
             this.manageAccBtn = new Guna.UI2.WinForms.Guna2GradientButton();
             this.logoutBtn = new Guna.UI2.WinForms.Guna2CircleButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.uC_AllDetails1 = new HotelManagement.AllUserControl.UC_AllDetails();
+            this.uC_ManageEmp1 = new HotelManagement.AllUserControl.UC_ManageEmp();
             this.uC_ManageAcc1 = new HotelManagement.AllUserControl.UC_ManageAcc();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.menuPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -46,6 +51,7 @@ namespace HotelManagement.Forms
             // menuPanel
             // 
             this.menuPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.menuPanel.Controls.Add(this.detailBtn);
             this.menuPanel.Controls.Add(this.movingPanel);
             this.menuPanel.Controls.Add(this.manageEmpBtn);
             this.menuPanel.Controls.Add(this.manageAccBtn);
@@ -53,6 +59,38 @@ namespace HotelManagement.Forms
             this.menuPanel.Name = "menuPanel";
             this.menuPanel.Size = new System.Drawing.Size(971, 99);
             this.menuPanel.TabIndex = 0;
+            // 
+            // detailBtn
+            // 
+            this.detailBtn.BorderRadius = 5;
+            this.detailBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.detailBtn.CheckedState.FillColor = System.Drawing.Color.Bisque;
+            this.detailBtn.CheckedState.FillColor2 = System.Drawing.Color.Moccasin;
+            this.detailBtn.CheckedState.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.detailBtn.CheckedState.Parent = this.detailBtn;
+            this.detailBtn.CustomImages.Parent = this.detailBtn;
+            this.detailBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.detailBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.detailBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.detailBtn.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.detailBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.detailBtn.DisabledState.Parent = this.detailBtn;
+            this.detailBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.detailBtn.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.detailBtn.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.detailBtn.ForeColor = System.Drawing.Color.Black;
+            this.detailBtn.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
+            this.detailBtn.HoverState.Parent = this.detailBtn;
+            this.detailBtn.Image = ((System.Drawing.Image)(resources.GetObject("detailBtn.Image")));
+            this.detailBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.detailBtn.ImageSize = new System.Drawing.Size(40, 40);
+            this.detailBtn.Location = new System.Drawing.Point(664, 27);
+            this.detailBtn.Name = "detailBtn";
+            this.detailBtn.ShadowDecoration.Parent = this.detailBtn;
+            this.detailBtn.Size = new System.Drawing.Size(208, 45);
+            this.detailBtn.TabIndex = 4;
+            this.detailBtn.Text = "All Details";
+            this.detailBtn.Click += new System.EventHandler(this.guna2GradientButton1_Click);
             // 
             // movingPanel
             // 
@@ -85,7 +123,7 @@ namespace HotelManagement.Forms
             this.manageEmpBtn.HoverState.Parent = this.manageEmpBtn;
             this.manageEmpBtn.Image = ((System.Drawing.Image)(resources.GetObject("manageEmpBtn.Image")));
             this.manageEmpBtn.ImageSize = new System.Drawing.Size(40, 40);
-            this.manageEmpBtn.Location = new System.Drawing.Point(566, 27);
+            this.manageEmpBtn.Location = new System.Drawing.Point(388, 27);
             this.manageEmpBtn.Name = "manageEmpBtn";
             this.manageEmpBtn.ShadowDecoration.Parent = this.manageEmpBtn;
             this.manageEmpBtn.Size = new System.Drawing.Size(208, 45);
@@ -152,16 +190,27 @@ namespace HotelManagement.Forms
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Cornsilk;
+            this.panel1.Controls.Add(this.uC_AllDetails1);
+            this.panel1.Controls.Add(this.uC_ManageEmp1);
             this.panel1.Controls.Add(this.uC_ManageAcc1);
             this.panel1.Location = new System.Drawing.Point(13, 157);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1575, 619);
             this.panel1.TabIndex = 3;
             // 
-            // guna2Elipse1
+            // uC_AllDetails1
             // 
-            this.guna2Elipse1.BorderRadius = 30;
-            this.guna2Elipse1.TargetControl = this.panel1;
+            this.uC_AllDetails1.Location = new System.Drawing.Point(3, 3);
+            this.uC_AllDetails1.Name = "uC_AllDetails1";
+            this.uC_AllDetails1.Size = new System.Drawing.Size(1569, 613);
+            this.uC_AllDetails1.TabIndex = 2;
+            // 
+            // uC_ManageEmp1
+            // 
+            this.uC_ManageEmp1.Location = new System.Drawing.Point(3, 3);
+            this.uC_ManageEmp1.Name = "uC_ManageEmp1";
+            this.uC_ManageEmp1.Size = new System.Drawing.Size(1569, 613);
+            this.uC_ManageEmp1.TabIndex = 1;
             // 
             // uC_ManageAcc1
             // 
@@ -169,6 +218,21 @@ namespace HotelManagement.Forms
             this.uC_ManageAcc1.Name = "uC_ManageAcc1";
             this.uC_ManageAcc1.Size = new System.Drawing.Size(1333, 616);
             this.uC_ManageAcc1.TabIndex = 0;
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 30;
+            this.guna2Elipse1.TargetControl = this.panel1;
+            // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.BorderRadius = 30;
+            this.guna2Elipse2.TargetControl = this.panel1;
+            // 
+            // guna2Elipse3
+            // 
+            this.guna2Elipse3.BorderRadius = 30;
+            this.guna2Elipse3.TargetControl = this.panel1;
             // 
             // Dashboard
             // 
@@ -200,5 +264,10 @@ namespace HotelManagement.Forms
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private AllUserControl.UC_ManageAcc uC_ManageAcc1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        private AllUserControl.UC_ManageEmp uC_ManageEmp1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
+        private AllUserControl.UC_AllDetails uC_AllDetails1;
+        private Guna.UI2.WinForms.Guna2GradientButton detailBtn;
     }
 }

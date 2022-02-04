@@ -117,11 +117,35 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AllUserControl\UC_AddRoom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AllUserControl\UC_AddRoom.Designer.cs">
+      <DependentUpon>UC_AddRoom.cs</DependentUpon>
+    </Compile>
     <Compile Include="AllUserControl\UC_AllDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="AllUserControl\UC_AllDetails.Designer.cs">
       <DependentUpon>UC_AllDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllUserControl\UC_CustomerCheckOut.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AllUserControl\UC_CustomerCheckOut.Designer.cs">
+      <DependentUpon>UC_CustomerCheckOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllUserControl\UC_CustomerDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AllUserControl\UC_CustomerDetail.Designer.cs">
+      <DependentUpon>UC_CustomerDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllUserControl\UC_CustomerRegistration.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AllUserControl\UC_CustomerRegistration.Designer.cs">
+      <DependentUpon>UC_CustomerRegistration.cs</DependentUpon>
     </Compile>
     <Compile Include="AllUserControl\UC_ManageAcc.cs">
       <SubType>UserControl</SubType>
@@ -138,6 +162,12 @@
     <Compile Include="Connect.cs" />
     <Compile Include="Controller\AccountController.cs" />
     <Compile Include="Controller\EmployeeController.cs" />
+    <Compile Include="Forms\Dashboard1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dashboard1.Designer.cs">
+      <DependentUpon>Dashboard1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +198,7 @@
     <Compile Include="Forms\testReport.Designer.cs">
       <DependentUpon>testReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="function.cs" />
     <Compile Include="hotelmanagementDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -178,14 +209,29 @@
     <Compile Include="Report\Employee.cs" />
     <Compile Include="Report\EmployeeList.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="AllUserControl\UC_AddRoom.resx">
+      <DependentUpon>UC_AddRoom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AllUserControl\UC_AllDetails.resx">
       <DependentUpon>UC_AllDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllUserControl\UC_CustomerCheckOut.resx">
+      <DependentUpon>UC_CustomerCheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllUserControl\UC_CustomerDetail.resx">
+      <DependentUpon>UC_CustomerDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllUserControl\UC_CustomerRegistration.resx">
+      <DependentUpon>UC_CustomerRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AllUserControl\UC_ManageAcc.resx">
       <DependentUpon>UC_ManageAcc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AllUserControl\UC_ManageEmp.resx">
       <DependentUpon>UC_ManageEmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dashboard1.resx">
+      <DependentUpon>Dashboard1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

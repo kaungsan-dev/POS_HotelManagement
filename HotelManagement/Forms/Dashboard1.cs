@@ -19,7 +19,33 @@ namespace HotelManagement.Forms
 
         private void Dashboard1_Load(object sender, EventArgs e)
         {
+            uC_AddRoom1.Visible = true;
+            uC_AddRoom1.BringToFront();
+            btnAddRoom.PerformClick();
+        }
 
+        private void btnAddRoom_Click(object sender, EventArgs e)
+        {
+            uC_AddRoom1.Visible = true;
+            uC_AddRoom1.BringToFront();
+        }
+
+        private void btnGuestRegistration_Click(object sender, EventArgs e)
+        {
+            uC_CustomerRegistration1.Visible = true;
+            uC_CustomerRegistration1.BringToFront();
+        }
+
+        private void btnCheckout_Click(object sender, EventArgs e)
+        {
+            uC_CustomerCheckOut1.Visible = true;
+            uC_CustomerCheckOut1.BringToFront();
+        }
+
+        private void btnCustomerDetail_Click(object sender, EventArgs e)
+        {
+            uC_CustomerDetail1.Visible = true;
+            uC_CustomerDetail1.BringToFront();
         }
     }
 }

@@ -64,8 +64,8 @@ namespace HotelManagement.Forms
                 else if (role.Equals("Reception"))
                 {
                     this.Hide();
-                    testForm tf = new testForm();
-                    tf.Show();
+                    Dashboard1 df1 = new Dashboard1();
+                    df1.Show();
                     clearBtn.PerformClick();
                 }
             }

@@ -12,7 +12,8 @@ namespace HotelManagement
 {
     class function
     {
-        protected MySqlConnection connection = new MySqlConnection("datasource=127.0.0.1;username=root;database=myHotel;SSL Mode=None");
+        //protected MySqlConnection connection = new MySqlConnection("datasource=127.0.0.1;username=root;database=myHotel;SSL Mode=None");
+        private MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=admin;database=hotelmanagement");
         protected MySqlConnection getConnection()
         {
             return connection;

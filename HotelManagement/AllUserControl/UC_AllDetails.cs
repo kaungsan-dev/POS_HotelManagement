@@ -1,5 +1,6 @@
 ﻿using HotelManagement.Controller;
 using HotelManagement.Report.Employee;
+using HotelManagement.Report.Guest;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -32,23 +33,15 @@ namespace HotelManagement.AllUserControl
                 // New Code
                 Employee emp = new Employee();
                 this.reportViewer1.RefreshReport();
+                reportViewer1.BringToFront();
                 EmployeeListBindingSource.DataSource = emp.GetEmployee();
-
-                //detailGridView.DataSource = EP.getEmployeeList();
-
-                //Connect con = new Connect();
-                //MySqlCommand command = new MySqlCommand();
-                //string query = "select * from employee";
-
-                //command.CommandText = query;
-                //command.Connection = con.getConnection();
-                //con.openConnection();
-
-                //MySqlDataAdapter adapter = new MySqlDataAdapter();
-                //DataTable table = new DataTable();
-                //adapter.SelectCommand = command;
-                //adapter.Fill(table);
-                //con.closeConnection();
+            }
+            else if(searchCombo.SelectedIndex == 1)
+            {
+                reportViewer2.BringToFront();
+                Guest guest = new Guest();
+                this.reportViewer2.RefreshReport();
+                GuestListBindingSource.DataSource = guest.GetGuest();
             }
         }
     }

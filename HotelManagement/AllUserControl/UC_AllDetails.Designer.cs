@@ -34,12 +34,15 @@ namespace HotelManagement.AllUserControl
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.searchCombo = new Guna.UI2.WinForms.Guna2ComboBox();
             this.detailGridView = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.GuestListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +51,7 @@ namespace HotelManagement.AllUserControl
             this.positionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EmployeeListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.detailGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GuestListBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeListBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,7 +90,8 @@ namespace HotelManagement.AllUserControl
             this.searchCombo.HoverState.Parent = this.searchCombo;
             this.searchCombo.ItemHeight = 30;
             this.searchCombo.Items.AddRange(new object[] {
-            "All Employee Details"});
+            "All Employee Details",
+            "All Guest Details"});
             this.searchCombo.ItemsAppearance.Parent = this.searchCombo;
             this.searchCombo.Location = new System.Drawing.Point(638, 98);
             this.searchCombo.Name = "searchCombo";
@@ -181,6 +186,22 @@ namespace HotelManagement.AllUserControl
             this.reportViewer1.Size = new System.Drawing.Size(1025, 482);
             this.reportViewer1.TabIndex = 18;
             // 
+            // reportViewer2
+            // 
+            reportDataSource2.Name = "DataSet1";
+            reportDataSource2.Value = this.GuestListBindingSource;
+            this.reportViewer2.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewer2.LocalReport.ReportEmbeddedResource = "HotelManagement.Report.Report2.rdlc";
+            this.reportViewer2.Location = new System.Drawing.Point(249, 152);
+            this.reportViewer2.Name = "reportViewer2";
+            this.reportViewer2.ServerReport.BearerToken = null;
+            this.reportViewer2.Size = new System.Drawing.Size(1025, 482);
+            this.reportViewer2.TabIndex = 19;
+            // 
+            // GuestListBindingSource
+            // 
+            this.GuestListBindingSource.DataSource = typeof(HotelManagement.Report.Guest.GuestList);
+            // 
             // iDDataGridViewTextBoxColumn
             // 
             this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
@@ -231,6 +252,7 @@ namespace HotelManagement.AllUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.reportViewer2);
             this.Controls.Add(this.detailGridView);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.searchCombo);
@@ -239,6 +261,7 @@ namespace HotelManagement.AllUserControl
             this.Name = "UC_AllDetails";
             this.Size = new System.Drawing.Size(1575, 767);
             ((System.ComponentModel.ISupportInitialize)(this.detailGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GuestListBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeListBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -260,5 +283,7 @@ namespace HotelManagement.AllUserControl
         private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn positionDataGridViewTextBoxColumn;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer2;
+        private System.Windows.Forms.BindingSource GuestListBindingSource;
     }
 }

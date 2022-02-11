@@ -49,6 +49,7 @@
             // 
             // btnCheckOut
             // 
+            this.btnCheckOut.BorderColor = System.Drawing.Color.White;
             this.btnCheckOut.BorderRadius = 15;
             this.btnCheckOut.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
             this.btnCheckOut.BorderThickness = 1;
@@ -60,17 +61,17 @@
             this.btnCheckOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCheckOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnCheckOut.DisabledState.Parent = this.btnCheckOut;
-            this.btnCheckOut.FillColor = System.Drawing.Color.White;
-            this.btnCheckOut.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheckOut.ForeColor = System.Drawing.Color.Black;
+            this.btnCheckOut.FillColor = System.Drawing.Color.Green;
+            this.btnCheckOut.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.btnCheckOut.ForeColor = System.Drawing.Color.White;
             this.btnCheckOut.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(221)))));
             this.btnCheckOut.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnCheckOut.HoverState.Parent = this.btnCheckOut;
-            this.btnCheckOut.Location = new System.Drawing.Point(1208, 609);
-            this.btnCheckOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCheckOut.Location = new System.Drawing.Point(906, 495);
+            this.btnCheckOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCheckOut.Name = "btnCheckOut";
             this.btnCheckOut.ShadowDecoration.Parent = this.btnCheckOut;
-            this.btnCheckOut.Size = new System.Drawing.Size(160, 36);
+            this.btnCheckOut.Size = new System.Drawing.Size(120, 29);
             this.btnCheckOut.TabIndex = 20;
             this.btnCheckOut.Text = "Check Out";
             this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
@@ -82,13 +83,13 @@
             this.txtCheckOutDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCheckOutDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.txtCheckOutDate.HoverState.Parent = this.txtCheckOutDate;
-            this.txtCheckOutDate.Location = new System.Drawing.Point(860, 609);
-            this.txtCheckOutDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCheckOutDate.Location = new System.Drawing.Point(645, 495);
+            this.txtCheckOutDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCheckOutDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.txtCheckOutDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.txtCheckOutDate.Name = "txtCheckOutDate";
             this.txtCheckOutDate.ShadowDecoration.Parent = this.txtCheckOutDate;
-            this.txtCheckOutDate.Size = new System.Drawing.Size(225, 36);
+            this.txtCheckOutDate.Size = new System.Drawing.Size(169, 29);
             this.txtCheckOutDate.TabIndex = 19;
             this.txtCheckOutDate.Value = new System.DateTime(2022, 1, 16, 20, 32, 59, 368);
             // 
@@ -96,9 +97,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.label5.Location = new System.Drawing.Point(856, 569);
+            this.label5.Location = new System.Drawing.Point(642, 462);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(112, 22);
+            this.label5.Size = new System.Drawing.Size(89, 20);
             this.label5.TabIndex = 18;
             this.label5.Text = "Check Out";
             // 
@@ -117,15 +119,15 @@
             this.txtRoomNo.ForeColor = System.Drawing.Color.Black;
             this.txtRoomNo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtRoomNo.HoverState.Parent = this.txtRoomNo;
-            this.txtRoomNo.Location = new System.Drawing.Point(470, 609);
-            this.txtRoomNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtRoomNo.Location = new System.Drawing.Point(352, 495);
+            this.txtRoomNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtRoomNo.Name = "txtRoomNo";
             this.txtRoomNo.PasswordChar = '\0';
             this.txtRoomNo.PlaceholderText = "Room No ";
             this.txtRoomNo.ReadOnly = true;
             this.txtRoomNo.SelectedText = "";
             this.txtRoomNo.ShadowDecoration.Parent = this.txtRoomNo;
-            this.txtRoomNo.Size = new System.Drawing.Size(353, 36);
+            this.txtRoomNo.Size = new System.Drawing.Size(265, 29);
             this.txtRoomNo.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtRoomNo.TabIndex = 17;
             // 
@@ -158,14 +160,14 @@
             this.guna2DataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(21, 117);
-            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(16, 95);
+            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 62;
             this.guna2DataGridView1.RowTemplate.Height = 28;
             this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(1347, 404);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(1010, 328);
             this.guna2DataGridView1.TabIndex = 16;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -205,14 +207,14 @@
             this.txtName.ForeColor = System.Drawing.Color.Black;
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.HoverState.Parent = this.txtName;
-            this.txtName.Location = new System.Drawing.Point(458, 77);
-            this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtName.Location = new System.Drawing.Point(344, 63);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderText = "Enter Full Name";
             this.txtName.SelectedText = "";
             this.txtName.ShadowDecoration.Parent = this.txtName;
-            this.txtName.Size = new System.Drawing.Size(353, 36);
+            this.txtName.Size = new System.Drawing.Size(265, 29);
             this.txtName.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtName.TabIndex = 15;
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
@@ -221,9 +223,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.label1.Location = new System.Drawing.Point(454, 43);
+            this.label1.Location = new System.Drawing.Point(340, 35);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 22);
+            this.label1.Size = new System.Drawing.Size(53, 20);
             this.label1.TabIndex = 14;
             this.label1.Text = "Name";
             // 
@@ -242,15 +245,15 @@
             this.txtCName.ForeColor = System.Drawing.Color.Black;
             this.txtCName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCName.HoverState.Parent = this.txtCName;
-            this.txtCName.Location = new System.Drawing.Point(40, 609);
-            this.txtCName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCName.Location = new System.Drawing.Point(30, 495);
+            this.txtCName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCName.Name = "txtCName";
             this.txtCName.PasswordChar = '\0';
             this.txtCName.PlaceholderText = "Enter Full Name";
             this.txtCName.ReadOnly = true;
             this.txtCName.SelectedText = "";
             this.txtCName.ShadowDecoration.Parent = this.txtCName;
-            this.txtCName.Size = new System.Drawing.Size(353, 36);
+            this.txtCName.Size = new System.Drawing.Size(265, 29);
             this.txtCName.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtCName.TabIndex = 23;
             // 
@@ -258,9 +261,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.label3.Location = new System.Drawing.Point(36, 572);
+            this.label3.Location = new System.Drawing.Point(27, 465);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 22);
+            this.label3.Size = new System.Drawing.Size(53, 20);
             this.label3.TabIndex = 22;
             this.label3.Text = "Name";
             // 
@@ -268,9 +272,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(-4, 15);
+            this.label2.Location = new System.Drawing.Point(-3, 12);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(359, 40);
+            this.label2.Size = new System.Drawing.Size(284, 32);
             this.label2.TabIndex = 21;
             this.label2.Text = "Customer Check out";
             // 
@@ -278,9 +283,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.label4.Location = new System.Drawing.Point(466, 572);
+            this.label4.Location = new System.Drawing.Point(350, 465);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 22);
+            this.label4.Size = new System.Drawing.Size(76, 20);
             this.label4.TabIndex = 24;
             this.label4.Text = "Room No";
             // 
@@ -291,7 +297,7 @@
             // 
             // UC_CustomerCheckOut
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.Controls.Add(this.label4);
@@ -305,8 +311,9 @@
             this.Controls.Add(this.guna2DataGridView1);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UC_CustomerCheckOut";
-            this.Size = new System.Drawing.Size(1415, 672);
+            this.Size = new System.Drawing.Size(1061, 546);
             this.Load += new System.EventHandler(this.UC_CustomerCheckOut_Load);
             this.Leave += new System.EventHandler(this.UC_CustomerCheckOut_Leave);
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();

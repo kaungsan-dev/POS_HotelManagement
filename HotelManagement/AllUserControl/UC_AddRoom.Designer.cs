@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.DataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
             this.txtBed = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -53,48 +53,49 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(20, 25);
+            this.label1.Location = new System.Drawing.Point(15, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(266, 39);
+            this.label1.Size = new System.Drawing.Size(221, 32);
             this.label1.TabIndex = 12;
             this.label1.Text = "Add New Room";
             // 
             // DataGridView
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.DataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.DataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DataGridView.BackgroundColor = System.Drawing.Color.White;
             this.DataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DataGridView.ColumnHeadersHeight = 4;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridView.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.DataGridView.EnableHeadersVisualStyles = false;
             this.DataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DataGridView.Location = new System.Drawing.Point(27, 86);
-            this.DataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DataGridView.Location = new System.Drawing.Point(20, 70);
+            this.DataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DataGridView.Name = "DataGridView";
             this.DataGridView.RowHeadersVisible = false;
             this.DataGridView.RowHeadersWidth = 62;
             this.DataGridView.RowTemplate.Height = 28;
             this.DataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridView.Size = new System.Drawing.Size(883, 402);
+            this.DataGridView.Size = new System.Drawing.Size(662, 327);
             this.DataGridView.TabIndex = 13;
             this.DataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.DataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -135,11 +136,11 @@
             "Double",
             "Triple"});
             this.txtBed.ItemsAppearance.Parent = this.txtBed;
-            this.txtBed.Location = new System.Drawing.Point(1016, 302);
-            this.txtBed.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBed.Location = new System.Drawing.Point(762, 245);
+            this.txtBed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBed.Name = "txtBed";
             this.txtBed.ShadowDecoration.Parent = this.txtBed;
-            this.txtBed.Size = new System.Drawing.Size(355, 36);
+            this.txtBed.Size = new System.Drawing.Size(267, 36);
             this.txtBed.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtBed.TabIndex = 21;
             // 
@@ -159,11 +160,11 @@
             "Ac",
             "Non-Ac"});
             this.txtType.ItemsAppearance.Parent = this.txtType;
-            this.txtType.Location = new System.Drawing.Point(1017, 219);
-            this.txtType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtType.Location = new System.Drawing.Point(763, 178);
+            this.txtType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtType.Name = "txtType";
             this.txtType.ShadowDecoration.Parent = this.txtType;
-            this.txtType.Size = new System.Drawing.Size(355, 36);
+            this.txtType.Size = new System.Drawing.Size(267, 36);
             this.txtType.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtType.TabIndex = 20;
             // 
@@ -182,14 +183,14 @@
             this.txtPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPrice.HoverState.Parent = this.txtPrice;
-            this.txtPrice.Location = new System.Drawing.Point(1016, 396);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtPrice.Location = new System.Drawing.Point(762, 322);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.PasswordChar = '\0';
             this.txtPrice.PlaceholderText = "";
             this.txtPrice.SelectedText = "";
             this.txtPrice.ShadowDecoration.Parent = this.txtPrice;
-            this.txtPrice.Size = new System.Drawing.Size(355, 29);
+            this.txtPrice.Size = new System.Drawing.Size(266, 24);
             this.txtPrice.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtPrice.TabIndex = 19;
             // 
@@ -208,14 +209,14 @@
             this.txtRoomNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtRoomNo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtRoomNo.HoverState.Parent = this.txtRoomNo;
-            this.txtRoomNo.Location = new System.Drawing.Point(1016, 130);
-            this.txtRoomNo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtRoomNo.Location = new System.Drawing.Point(762, 106);
+            this.txtRoomNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtRoomNo.Name = "txtRoomNo";
             this.txtRoomNo.PasswordChar = '\0';
             this.txtRoomNo.PlaceholderText = "";
             this.txtRoomNo.SelectedText = "";
             this.txtRoomNo.ShadowDecoration.Parent = this.txtRoomNo;
-            this.txtRoomNo.Size = new System.Drawing.Size(355, 29);
+            this.txtRoomNo.Size = new System.Drawing.Size(266, 24);
             this.txtRoomNo.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtRoomNo.TabIndex = 18;
             // 
@@ -223,9 +224,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.label5.Location = new System.Drawing.Point(1012, 364);
+            this.label5.Location = new System.Drawing.Point(759, 296);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 22);
+            this.label5.Size = new System.Drawing.Size(46, 20);
             this.label5.TabIndex = 17;
             this.label5.Text = "Price";
             // 
@@ -233,9 +235,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.label4.Location = new System.Drawing.Point(1012, 280);
+            this.label4.Location = new System.Drawing.Point(759, 228);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 22);
+            this.label4.Size = new System.Drawing.Size(38, 20);
             this.label4.TabIndex = 16;
             this.label4.Text = "Bed";
             // 
@@ -243,9 +246,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.label3.Location = new System.Drawing.Point(1012, 188);
+            this.label3.Location = new System.Drawing.Point(759, 153);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 22);
+            this.label3.Size = new System.Drawing.Size(88, 20);
             this.label3.TabIndex = 15;
             this.label3.Text = "Room Type";
             // 
@@ -253,14 +257,16 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.label2.Location = new System.Drawing.Point(1012, 103);
+            this.label2.Location = new System.Drawing.Point(759, 84);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(142, 22);
+            this.label2.Size = new System.Drawing.Size(113, 20);
             this.label2.TabIndex = 14;
             this.label2.Text = "Room Number";
             // 
             // btnUpdate
             // 
+            this.btnUpdate.BorderColor = System.Drawing.Color.White;
             this.btnUpdate.BorderRadius = 15;
             this.btnUpdate.BorderThickness = 1;
             this.btnUpdate.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
@@ -273,20 +279,20 @@
             this.btnUpdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnUpdate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnUpdate.DisabledState.Parent = this.btnUpdate;
-            this.btnUpdate.FillColor = System.Drawing.Color.White;
             this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.btnUpdate.ForeColor = System.Drawing.Color.Black;
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.HoverState.Parent = this.btnUpdate;
-            this.btnUpdate.Location = new System.Drawing.Point(1064, 550);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUpdate.Location = new System.Drawing.Point(798, 447);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.ShadowDecoration.Parent = this.btnUpdate;
-            this.btnUpdate.Size = new System.Drawing.Size(164, 36);
+            this.btnUpdate.Size = new System.Drawing.Size(123, 29);
             this.btnUpdate.TabIndex = 24;
             this.btnUpdate.Text = "Update Room";
             // 
             // btndelete
             // 
+            this.btndelete.BorderColor = System.Drawing.Color.White;
             this.btndelete.BorderRadius = 15;
             this.btndelete.BorderThickness = 1;
             this.btndelete.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
@@ -299,20 +305,21 @@
             this.btndelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btndelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btndelete.DisabledState.Parent = this.btndelete;
-            this.btndelete.FillColor = System.Drawing.Color.White;
+            this.btndelete.FillColor = System.Drawing.Color.OrangeRed;
             this.btndelete.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.btndelete.ForeColor = System.Drawing.Color.Black;
+            this.btndelete.ForeColor = System.Drawing.Color.White;
             this.btndelete.HoverState.Parent = this.btndelete;
-            this.btndelete.Location = new System.Drawing.Point(1230, 550);
-            this.btndelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btndelete.Location = new System.Drawing.Point(922, 447);
+            this.btndelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btndelete.Name = "btndelete";
             this.btndelete.ShadowDecoration.Parent = this.btndelete;
-            this.btndelete.Size = new System.Drawing.Size(164, 36);
+            this.btndelete.Size = new System.Drawing.Size(123, 29);
             this.btndelete.TabIndex = 23;
             this.btndelete.Text = "Delete Room";
             // 
             // btnAddRoom
             // 
+            this.btnAddRoom.BorderColor = System.Drawing.Color.White;
             this.btnAddRoom.BorderRadius = 15;
             this.btnAddRoom.BorderThickness = 1;
             this.btnAddRoom.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
@@ -325,15 +332,15 @@
             this.btnAddRoom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnAddRoom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnAddRoom.DisabledState.Parent = this.btnAddRoom;
-            this.btnAddRoom.FillColor = System.Drawing.Color.White;
+            this.btnAddRoom.FillColor = System.Drawing.Color.Green;
             this.btnAddRoom.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.btnAddRoom.ForeColor = System.Drawing.Color.Black;
+            this.btnAddRoom.ForeColor = System.Drawing.Color.White;
             this.btnAddRoom.HoverState.Parent = this.btnAddRoom;
-            this.btnAddRoom.Location = new System.Drawing.Point(912, 550);
-            this.btnAddRoom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddRoom.Location = new System.Drawing.Point(684, 447);
+            this.btnAddRoom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddRoom.Name = "btnAddRoom";
             this.btnAddRoom.ShadowDecoration.Parent = this.btnAddRoom;
-            this.btnAddRoom.Size = new System.Drawing.Size(146, 36);
+            this.btnAddRoom.Size = new System.Drawing.Size(110, 29);
             this.btnAddRoom.TabIndex = 22;
             this.btnAddRoom.Text = "Add Room";
             this.btnAddRoom.Click += new System.EventHandler(this.btnAddRoom_Click);
@@ -345,7 +352,7 @@
             // 
             // UC_AddRoom
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.Controls.Add(this.btnUpdate);
@@ -361,8 +368,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.DataGridView);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UC_AddRoom";
-            this.Size = new System.Drawing.Size(1415, 672);
+            this.Size = new System.Drawing.Size(1061, 546);
             this.Load += new System.EventHandler(this.UC_AddRoom_Load);
             this.Enter += new System.EventHandler(this.UC_AddRoom_Enter);
             this.Leave += new System.EventHandler(this.UC_AddRoom_Leave_1);

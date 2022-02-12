@@ -12,8 +12,8 @@ namespace HotelManagement
 {
     class function
     {
-        //protected MySqlConnection connection = new MySqlConnection("datasource=127.0.0.1;username=root;database=myHotel;SSL Mode=None");
-        private MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=admin;database=hotelmanagement");
+        protected MySqlConnection connection = new MySqlConnection("datasource=127.0.0.1;username=root;database=myHotel;SSL Mode=None");
+        //private MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=admin;database=hotelmanagement");
         protected MySqlConnection getConnection()
         {
             return connection;
@@ -70,11 +70,11 @@ namespace HotelManagement
             conn.Close();
         }
 
-        public bool updateCustomer(int id, string name, Int64 contact, string nationality, string gender, string dob, string idProof, string address, string checkin)
+        public bool updateCustomer(int id, string name, Int64 contact, string nationality, string gender, string dob, string idProof, string address)
         {
             MySqlConnection conn = getConnection();
             MySqlCommand command = new MySqlCommand();
-            string query = "update customer set customerName=@name, mobile=@contact, nationality=@nationality, gender=@gender, dateofbirth=@dob, idProof=@idProof, address=@address, checkin=@checkin where customerId=@id";
+            string query = "update customer set customerName=@name, mobile=@contact, nationality=@nationality, gender=@gender, dateofbirth=@dob, idProof=@idProof, address=@address where customerId=@id";
             command.CommandText = query;
             command.Connection = conn;
             command.Parameters.Add("@id", MySqlDbType.Int32).Value = id;
@@ -85,7 +85,7 @@ namespace HotelManagement
             command.Parameters.Add("@dob", MySqlDbType.VarChar).Value = dob;
             command.Parameters.Add("@idproof", MySqlDbType.VarChar).Value = idProof;
             command.Parameters.Add("@address", MySqlDbType.VarChar).Value = address;
-            command.Parameters.Add("@checkin", MySqlDbType.VarChar).Value = checkin;
+           
             conn.Open();
 
             if (command.ExecuteNonQuery() == 1)
@@ -124,6 +124,55 @@ namespace HotelManagement
 
         }
 
+        public bool updateRoom(int id, string roomNo, string roomType, string bed, Int64 price)
+        {
+            MySqlConnection conn = getConnection();
+            MySqlCommand command = new MySqlCommand();
+            string query = "update rooms set roomNo=@roomNo, roomType=@roomType, bed=@bed, price=@price where roomid=@id";
+            command.CommandText = query;
+            command.Connection = conn;
+            command.Parameters.Add("@id", MySqlDbType.Int32).Value = id;
+            command.Parameters.Add("@roomNo", MySqlDbType.VarChar).Value = roomNo;
+            command.Parameters.Add("@roomType", MySqlDbType.VarChar).Value = roomType;
+            command.Parameters.Add("@bed", MySqlDbType.VarChar).Value = bed;
+            command.Parameters.Add("@price", MySqlDbType.Int64).Value = price;
+            conn.Open();
+
+            if (command.ExecuteNonQuery() == 1)
+            {
+                conn.Close();
+                return true;
+            }
+            else
+            {
+                conn.Close();
+                return false;
+            }
+
+        }
+
+        public bool deleteRoom(int id)
+        {
+            MySqlConnection conn = getConnection();
+            MySqlCommand command = new MySqlCommand();
+            string query = "delete from rooms where roomid=@id";
+            command.CommandText = query;
+            command.Connection = conn;
+            command.Parameters.Add("@id", MySqlDbType.Int32).Value = id;
+            conn.Open();
+
+            if (command.ExecuteNonQuery() == 1)
+            {
+                conn.Close();
+                return true;
+            }
+            else
+            {
+                conn.Close();
+                return false;
+            }
+
+        }
         public MySqlDataReader getForCombo(String query)
         {
             MySqlConnection conn = getConnection();

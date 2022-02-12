@@ -39,7 +39,7 @@ namespace HotelManagement.AllUserControl
                 txtDob.Text = DataGridView.Rows[e.RowIndex].Cells[5].Value.ToString();
                 txtIdProof.Text = DataGridView.Rows[e.RowIndex].Cells[6].Value.ToString();
                 txtAddress.Text = DataGridView.Rows[e.RowIndex].Cells[7].Value.ToString();
-                txtCheckIn.Text = DataGridView.Rows[e.RowIndex].Cells[8].Value.ToString();
+              
 
             }
         }
@@ -47,7 +47,7 @@ namespace HotelManagement.AllUserControl
         private void btnupdate_Click(object sender, EventArgs e)
         {
             if (txtName.Text != "" && txtContact.Text != "" && txtNationality.Text != "" && txtGender.Text != "" && txtDob.Text != "" &&
-                txtIdProof.Text != "" && txtAddress.Text != "" && txtCheckIn.Text != "")
+                txtIdProof.Text != "" && txtAddress.Text != "")
             {
                 if (MessageBox.Show("Are you sure?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
                 {
@@ -58,9 +58,9 @@ namespace HotelManagement.AllUserControl
                     String dob = txtDob.Text;
                     String idProof = txtIdProof.Text;
                     String address = txtAddress.Text;
-                    String checkin = txtCheckIn.Text;
+                  
 
-                    bool updateCustomer = fc.updateCustomer(id, name, contact, nationality, gender, dob, idProof, address, checkin);
+                    bool updateCustomer = fc.updateCustomer(id, name, contact, nationality, gender, dob, idProof, address);
 
                     if (updateCustomer)
                     {
@@ -83,7 +83,7 @@ namespace HotelManagement.AllUserControl
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (txtName.Text != "" && txtContact.Text != "" && txtNationality.Text != "" && txtGender.Text != "" && txtDob.Text != "" &&
-              txtIdProof.Text != "" && txtAddress.Text != "" && txtCheckIn.Text != "")
+              txtIdProof.Text != "" && txtAddress.Text != "")
             {
                 if (MessageBox.Show("Are you sure?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
                 {
@@ -116,7 +116,7 @@ namespace HotelManagement.AllUserControl
             txtDob.ResetText();
             txtIdProof.Clear();
             txtAddress.Clear();
-            txtCheckIn.ResetText();
+         
         }
 
         private void UC_CustomerDetail_Leave(object sender, EventArgs e)
@@ -142,6 +142,14 @@ namespace HotelManagement.AllUserControl
         private void txtAddress_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnrefresh_Click(object sender, EventArgs e)
+        {
+
+            query = "select * from customer";
+            DataSet ds = fc.getData(query);
+            DataGridView.DataSource = ds.Tables[0];
         }
     }
 }

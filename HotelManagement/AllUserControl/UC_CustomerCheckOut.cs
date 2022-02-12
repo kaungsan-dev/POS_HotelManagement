@@ -80,5 +80,12 @@ namespace HotelManagement.AllUserControl
         {
             clearAll();
         }
+
+        private void btnrefresh_Click(object sender, EventArgs e)
+        {
+            query = "SELECT customer.customerId, customer.customerName,customer.mobile,customer.nationality,customer.gender,customer.dateofbirth,customer.idProof,customer.address,customer.checkin, rooms.roomNo,rooms.roomType,rooms.bed,rooms.price FROM customer INNER JOIN rooms ON customer.roomid = rooms.roomid where customerName like '" + txtName.Text + "%' and checkedout = 'NO'";
+            DataSet ds = fc.getData(query);
+            guna2DataGridView1.DataSource = ds.Tables[0];
+        }
     }
 }

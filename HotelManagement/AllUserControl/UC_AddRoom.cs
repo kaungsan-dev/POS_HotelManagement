@@ -68,5 +68,66 @@ namespace HotelManagement.AllUserControl
         {
             UC_AddRoom_Load(this, null);
         }
+        int id;
+        private void DataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (DataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                id = int.Parse(DataGridView.Rows[e.RowIndex].Cells[0].Value.ToString());
+                txtRoomNo.Text = DataGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtType.Text = DataGridView.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txtBed.Text = DataGridView.Rows[e.RowIndex].Cells[3].Value.ToString();
+                txtPrice.Text = DataGridView.Rows[e.RowIndex].Cells[4].Value.ToString();
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (txtRoomNo.Text != "" && txtType.Text != "" && txtBed.Text != "" && txtPrice.Text != "")
+            {
+                if (MessageBox.Show("Are you sure?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+                {
+                    String roomNo = txtRoomNo.Text;
+                    String type = txtType.Text;
+                    String bed = txtBed.Text;
+                    Int64 price = Convert.ToInt64(txtPrice.Text);
+
+                    bool updateRoom = fc.updateRoom(id, roomNo, type, bed, price);
+
+                    if (updateRoom)
+                    {
+                        UC_AddRoom_Load(this, null);
+                        clearAll();
+                        MessageBox.Show("Room Updated", "Rooms", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error", "Rooms", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        private void btndelete_Click(object sender, EventArgs e)
+        {
+            if (txtRoomNo.Text != "" && txtType.Text != "" && txtBed.Text != "" && txtPrice.Text != "")
+            {
+                if (MessageBox.Show("Are you sure?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+                {
+                    bool deleteRoom = fc.deleteRoom(id);
+
+                    if (deleteRoom)
+                    {
+                        UC_AddRoom_Load(this, null);
+                        clearAll();
+                        MessageBox.Show("Room Updated", "Rooms", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error", "Rooms", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
     }
 }

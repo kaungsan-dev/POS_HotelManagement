@@ -37,14 +37,14 @@
             this.btnGuestRegistration = new Guna.UI2.WinForms.Guna2Button();
             this.btnexit = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.uC_CustomerDetail1 = new HotelManagement.AllUserControl.UC_CustomerDetail();
-            this.uC_CustomerCheckOut1 = new HotelManagement.AllUserControl.UC_CustomerCheckOut();
-            this.uC_CustomerRegistration1 = new HotelManagement.AllUserControl.UC_CustomerRegistration();
-            this.uC_AddRoom1 = new HotelManagement.AllUserControl.UC_AddRoom();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.uC_CustomerDetail1 = new HotelManagement.AllUserControl.UC_CustomerDetail();
+            this.uC_CustomerCheckOut1 = new HotelManagement.AllUserControl.UC_CustomerCheckOut();
+            this.uC_CustomerRegistration1 = new HotelManagement.AllUserControl.UC_CustomerRegistration();
+            this.uC_AddRoom1 = new HotelManagement.AllUserControl.UC_AddRoom();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
@@ -60,7 +60,7 @@
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(1387, 104);
+            this.guna2Panel1.Size = new System.Drawing.Size(1864, 104);
             this.guna2Panel1.TabIndex = 1;
             // 
             // btnAddRoom
@@ -82,7 +82,7 @@
             this.btnAddRoom.HoverState.Parent = this.btnAddRoom;
             this.btnAddRoom.Image = ((System.Drawing.Image)(resources.GetObject("btnAddRoom.Image")));
             this.btnAddRoom.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnAddRoom.Location = new System.Drawing.Point(3, 17);
+            this.btnAddRoom.Location = new System.Drawing.Point(34, 17);
             this.btnAddRoom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddRoom.Name = "btnAddRoom";
             this.btnAddRoom.ShadowDecoration.Parent = this.btnAddRoom;
@@ -111,7 +111,7 @@
             this.btnCustomerDetail.HoverState.Parent = this.btnCustomerDetail;
             this.btnCustomerDetail.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomerDetail.Image")));
             this.btnCustomerDetail.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnCustomerDetail.Location = new System.Drawing.Point(1075, 17);
+            this.btnCustomerDetail.Location = new System.Drawing.Point(1504, 17);
             this.btnCustomerDetail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCustomerDetail.Name = "btnCustomerDetail";
             this.btnCustomerDetail.ShadowDecoration.Parent = this.btnCustomerDetail;
@@ -140,7 +140,7 @@
             this.btnCheckout.HoverState.Parent = this.btnCheckout;
             this.btnCheckout.Image = ((System.Drawing.Image)(resources.GetObject("btnCheckout.Image")));
             this.btnCheckout.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnCheckout.Location = new System.Drawing.Point(718, 17);
+            this.btnCheckout.Location = new System.Drawing.Point(1039, 17);
             this.btnCheckout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCheckout.Name = "btnCheckout";
             this.btnCheckout.ShadowDecoration.Parent = this.btnCheckout;
@@ -168,7 +168,7 @@
             this.btnGuestRegistration.HoverState.Parent = this.btnGuestRegistration;
             this.btnGuestRegistration.Image = ((System.Drawing.Image)(resources.GetObject("btnGuestRegistration.Image")));
             this.btnGuestRegistration.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnGuestRegistration.Location = new System.Drawing.Point(322, 17);
+            this.btnGuestRegistration.Location = new System.Drawing.Point(511, 17);
             this.btnGuestRegistration.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuestRegistration.Name = "btnGuestRegistration";
             this.btnGuestRegistration.ShadowDecoration.Parent = this.btnGuestRegistration;
@@ -210,42 +210,9 @@
             this.guna2Panel2.Location = new System.Drawing.Point(12, 120);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(1415, 698);
+            this.guna2Panel2.Size = new System.Drawing.Size(1906, 921);
             this.guna2Panel2.TabIndex = 3;
-            // 
-            // uC_CustomerDetail1
-            // 
-            this.uC_CustomerDetail1.BackColor = System.Drawing.Color.Cornsilk;
-            this.uC_CustomerDetail1.Font = new System.Drawing.Font("Century Gothic", 8.25F);
-            this.uC_CustomerDetail1.Location = new System.Drawing.Point(-3, -4);
-            this.uC_CustomerDetail1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.uC_CustomerDetail1.Name = "uC_CustomerDetail1";
-            this.uC_CustomerDetail1.Size = new System.Drawing.Size(1415, 698);
-            this.uC_CustomerDetail1.TabIndex = 3;
-            // 
-            // uC_CustomerCheckOut1
-            // 
-            this.uC_CustomerCheckOut1.BackColor = System.Drawing.Color.Cornsilk;
-            this.uC_CustomerCheckOut1.Location = new System.Drawing.Point(3, 4);
-            this.uC_CustomerCheckOut1.Name = "uC_CustomerCheckOut1";
-            this.uC_CustomerCheckOut1.Size = new System.Drawing.Size(1388, 672);
-            this.uC_CustomerCheckOut1.TabIndex = 2;
-            // 
-            // uC_CustomerRegistration1
-            // 
-            this.uC_CustomerRegistration1.BackColor = System.Drawing.Color.Cornsilk;
-            this.uC_CustomerRegistration1.Location = new System.Drawing.Point(0, 4);
-            this.uC_CustomerRegistration1.Name = "uC_CustomerRegistration1";
-            this.uC_CustomerRegistration1.Size = new System.Drawing.Size(1415, 672);
-            this.uC_CustomerRegistration1.TabIndex = 1;
-            // 
-            // uC_AddRoom1
-            // 
-            this.uC_AddRoom1.BackColor = System.Drawing.Color.Cornsilk;
-            this.uC_AddRoom1.Location = new System.Drawing.Point(0, 4);
-            this.uC_AddRoom1.Name = "uC_AddRoom1";
-            this.uC_AddRoom1.Size = new System.Drawing.Size(1415, 672);
-            this.uC_AddRoom1.TabIndex = 0;
+            this.guna2Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2_Paint);
             // 
             // guna2Elipse1
             // 
@@ -267,18 +234,56 @@
             this.guna2Elipse4.BorderRadius = 30;
             this.guna2Elipse4.TargetControl = this.guna2Panel2;
             // 
+            // uC_CustomerDetail1
+            // 
+            this.uC_CustomerDetail1.BackColor = System.Drawing.Color.Cornsilk;
+            this.uC_CustomerDetail1.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            this.uC_CustomerDetail1.Location = new System.Drawing.Point(4, 4);
+            this.uC_CustomerDetail1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.uC_CustomerDetail1.Name = "uC_CustomerDetail1";
+            this.uC_CustomerDetail1.Size = new System.Drawing.Size(1906, 913);
+            this.uC_CustomerDetail1.TabIndex = 3;
+            // 
+            // uC_CustomerCheckOut1
+            // 
+            this.uC_CustomerCheckOut1.BackColor = System.Drawing.Color.Cornsilk;
+            this.uC_CustomerCheckOut1.Location = new System.Drawing.Point(1, 4);
+            this.uC_CustomerCheckOut1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.uC_CustomerCheckOut1.Name = "uC_CustomerCheckOut1";
+            this.uC_CustomerCheckOut1.Size = new System.Drawing.Size(1906, 921);
+            this.uC_CustomerCheckOut1.TabIndex = 2;
+            // 
+            // uC_CustomerRegistration1
+            // 
+            this.uC_CustomerRegistration1.BackColor = System.Drawing.Color.Cornsilk;
+            this.uC_CustomerRegistration1.Location = new System.Drawing.Point(1, 4);
+            this.uC_CustomerRegistration1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.uC_CustomerRegistration1.Name = "uC_CustomerRegistration1";
+            this.uC_CustomerRegistration1.Size = new System.Drawing.Size(1925, 921);
+            this.uC_CustomerRegistration1.TabIndex = 1;
+            // 
+            // uC_AddRoom1
+            // 
+            this.uC_AddRoom1.BackColor = System.Drawing.Color.Cornsilk;
+            this.uC_AddRoom1.Location = new System.Drawing.Point(4, 4);
+            this.uC_AddRoom1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.uC_AddRoom1.Name = "uC_AddRoom1";
+            this.uC_AddRoom1.Size = new System.Drawing.Size(1906, 921);
+            this.uC_AddRoom1.TabIndex = 0;
+            // 
             // Dashboard1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
-            this.ClientSize = new System.Drawing.Size(1439, 852);
+            this.ClientSize = new System.Drawing.Size(1924, 1055);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.btnexit);
             this.Controls.Add(this.guna2Panel1);
             this.Name = "Dashboard1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Dashboard1_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
